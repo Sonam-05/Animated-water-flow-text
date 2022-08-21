@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    -webkit-font-smotthing : antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: aqua;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(174, 158, 14);
+}
+
+h1:nth-child(2){
+    color: rgb(0, 123, 255);
+    animation: flow 2s ease-in-out infinite;
+}
+
+@keyframes flow{
+    0%, 100%{
+        clip-path: polygon(0% 57%, 4% 52%, 9% 48%, 13% 46%, 18% 45%, 23% 45%, 27% 47%, 30% 49%, 34% 52%, 39% 55%, 43% 58%, 48% 59%, 53% 60%, 58% 59%, 63% 55%, 68% 51%, 73% 47%, 79% 45%, 85% 46%, 90% 48%, 95% 51%, 98% 53%, 100% 100%, 0% 100%);
+    }
+
+    50%{
+        clip-path: polygon(0% 57%, 4% 62%, 9% 66%, 14% 68%, 18% 69%, 23% 69%, 29% 66%, 33% 64%, 37% 59%, 40% 57%, 42% 55%, 48% 53%, 52% 50%, 57% 49%, 61% 51%, 67% 54%, 72% 57%, 77% 61%, 83% 61%, 89% 60%, 94% 56%, 98% 53%, 100% 100%, 0% 100%);
+    }
+}
+
+
+
